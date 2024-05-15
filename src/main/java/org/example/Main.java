@@ -23,5 +23,18 @@ public class Main {
             System.out.println("Bucket " + bucketCount + ": " + count + " elements");
             bucketCount++;
         }
+        BST<Integer, Integer> bst = new BST<>();
+        bst.put(3,1);
+        bst.put(1,3);
+        bst.put(4,4);
+        bst.put(2,5);
+        for (Integer key : bst.iterator()) {
+            System.out.println("Key: " + key + ", Value: " + bst.get(key));
+        }
+        System.out.println("BST after remove: ");
+        bst.delete(1);
+        for (Integer key : bst.iterator()) {
+            System.out.println("Key: " + key + ", Value: " + bst.get(key));
+        }
     }
 }
